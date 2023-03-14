@@ -6,7 +6,7 @@ var gameOptions = {
     crateSpeed: 700,
     crateHorizontalRange: 540,
     fallingHeight: 700,
-    localStorageName: "stackthecratesgame",
+    localStorageName: "nyptopperpropper",
     gameWidth: 640,
     gameHeight: 960
 }
@@ -41,7 +41,7 @@ playGame.prototype = {
         game.stage.disableVisibilityChange = true;
         game.load.image("ground", "assets/sprites/pizzafloor.png");
         game.load.image("sky", "assets/sprites/sky.png");
-        game.load.image("crate", "assets/sprites/italianhanddropper.png");
+        game.load.image("hand", "assets/sprites/italianhanddropper.png");
         game.load.image("topping1", "assets/sprites/topping1.png" );
         game.load.image("topping2", "assets/sprites/topping2.png" );
         game.load.image("topping3", "assets/sprites/topping3.png" );
@@ -81,7 +81,7 @@ playGame.prototype = {
         this.removeSound = game.add.audio("remove");
         this.score = 0;
         GROUNDHEIGHT = game.cache.getImage("ground").height;
-        CRATEHEIGHT = game.cache.getImage("crate").height;
+        CRATEHEIGHT = game.cache.getImage("hand").height;
         this.firstCrate = true;
         var sky = game.add.image(0, 0, "sky");
         sky.width = game.width;
@@ -95,7 +95,7 @@ playGame.prototype = {
         this.canDrop = true;
         var ground = game.add.sprite(game.width / 2, game.height, "ground");
         ground.y = game.height - ground.height / 2;
-        this.movingCrate = game.add.sprite((game.width - gameOptions.crateHorizontalRange) / 2 ,  game.height - GROUNDHEIGHT - gameOptions.fallingHeight, "crate");
+        this.movingCrate = game.add.sprite((game.width - gameOptions.crateHorizontalRange) / 2 ,  game.height - GROUNDHEIGHT - gameOptions.fallingHeight, "hand");
         this.movingCrate.anchor.set(0.5);
         this.cameraGroup.add(this.movingCrate);
         var crateTween = game.add.tween(this.movingCrate).to({
