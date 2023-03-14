@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Form</title>
+</head>
+<body>
+    <div class="form-container">
+      <form name="myForm" action="/gamepage.html">
+        <label for="fname">Name:</label>
+        <input type="text" name="fname" id="fname" required>
+        <label for="fsurname">Surname:</label>
+        <input type="text" name="fsurname" id="fsurname" required>
+        <label for="femail">Email:</label>
+        <input type="email" name="femail" id="femail" required>
+        <label for="ftoa">
+          <input type="checkbox" name="ftoa" id="ftoa" required>
+          I agree with the terms of conditions
+        </label>
+        <input type="submit" value="Play The Game">
+      </form>
+    </div>
+  </body>
+</html>
